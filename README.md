@@ -16,8 +16,9 @@ You: What's the next race at Randwick and who's favourite?
   Favourite: <runner> at $2.40 (sportsbet) / $2.55 (tab) / $2.35 (neds)
 ```
 
-14 Australian bookmakers on racing. AU thoroughbred, greyhound and harness; NZ thoroughbred
-and harness. AFL, NRL, NBA, NFL, tennis, cricket and more on sports. Free tier: 3,000 credits
+15 Australian bookmakers on racing (measured 19 Oct 2026; live count at
+https://puntersedge.online/coverage-report.json). AU thoroughbred, greyhound and harness; NZ
+thoroughbred and harness; British, Irish and South African racing on smaller panels. AFL, NRL, NBA, NFL, tennis, cricket and more on sports. Free tier: 3,000 credits
 a month, no card.
 
 ---
@@ -266,8 +267,10 @@ price as fact — it can say how fresh the number is instead of implying it is l
 
 ## Coverage, stated honestly
 
-**Racing: 14 Australian bookmakers** — BetRight, Sportsbet, Betr, TAB, Ladbrokes, Neds,
-Unibet, PointsBet, NextBet, TABtouch, Palmerbet, BetDeluxe, BetGold and BoostBet. The live count
+**Racing: 15 Australian bookmakers** (measured 19 Oct 2026) — BetRight, Sportsbet, Betr, TAB,
+Ladbrokes, Neds, Unibet, PointsBet, NextBet, TABtouch, Palmerbet, BetDeluxe, bet365, BetGold and
+BoostBet, which are 13 independent price sources (BetGold/BoostBet and Ladbrokes/Neds close at the
+same price on 85%+ of runners). The live count
 and per-book freshness are published at
 https://puntersedge.online/coverage-report?utm_source=github&utm_medium=readme.
 
@@ -279,8 +282,8 @@ not the feed for you.
 Bookmaker **keys** in the API are not always the brand: NextBet is returned as `playup`, its
 name before rebranding. Filter on the key, not the display name.
 
-**Near the jump, coverage is broad and fairly even.** Measured over 13 days of captured
-snapshots — 3,339 Australian races, each within 30 minutes of jumping — every one of the
+**Near the jump, coverage is broad and fairly even.** In an earlier measurement, before bet365
+joined the panel, over 13 days of captured snapshots — 3,339 Australian races, each within 30 minutes of jumping — every one of the
 fourteen sources quoted between 75% and 97% of them: TABtouch 97%, PointsBet 96%, then
 Sportsbet, Neds, Palmerbet, Ladbrokes, BetRight, Betr and TAB all clustered at 80–82%,
 Unibet 79% and NextBet 75%.
@@ -289,13 +292,16 @@ Books publish markets at different times, so a race several hours out often carr
 three prices where more appear closer to the jump. Every response names the books that actually
 quoted, so you can read the real depth per race rather than trusting an average.
 
-**Sports: fewer again.** At most 5 bookmakers on AFL and NRL, 3 on NBA and ATP, and as few as 1
-on some competitions. That is a connector-coverage limit, not an outage. Racing is where this
+**Sports: fewer again.** On 19 Oct 2026 a quoted fixture averaged between 1 and 5 bookmakers
+depending on the sport, and on some competitions it is usually 1; the live per-sport figures are at
+https://puntersedge.online/api/coverage. That is a connector-coverage limit, not an outage. Racing is where this
 feed is strongest, and the tools say so rather than implying a uniform market.
 
-Pass `country=AU` for racing. **87% of foreign and unlabelled races carry exactly one
-bookmaker**, so there is usually nothing to compare — but "usually" is the honest word: over the
-same 13 days, 10% carried two books and a small tail (about 3%) carried eleven. Check
+Pass `country=AU` for racing (`GB,IE` for Britain and Ireland, `ZA` for South Africa — the code is
+`GB`, not `UK`). British, Irish and South African races carry smaller panels of their own (on 19 Oct
+2026 a median of 4 and 5 books a race). In that earlier 13-day measurement, **87% of the other foreign
+and unlabelled races carried exactly one bookmaker**, so there is usually nothing to compare — but
+"usually" is the honest word: 10% carried two books and a small tail (about 3%) carried eleven. Check
 `bookmakers` per race rather than assuming either way.
 
 An Australian race **gathers books as it approaches the jump**, so its depth is a range, not a

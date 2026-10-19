@@ -203,8 +203,8 @@ server.tool(
   "get_sports_odds",
   "Head-to-head and other market odds for one sport, from every bookmaker covering it. Use for " +
     "'odds for the <team> game', 'who is favourite in the NRL tonight'. Sports coverage is thinner " +
-    "than racing — at most 5 bookmakers on AFL and NRL, 3 on NBA and ATP, and as few as 1 on some " +
-    "competitions — so say how many books are quoting rather than implying a full market.",
+    "than racing — usually between 1 and 5 bookmakers on a fixture depending on the sport, and 1 on " +
+    "some competitions — so say how many books are quoting rather than implying a full market.",
   {
     sport_key: z.string().describe("From list_sports, e.g. 'afl', 'nrl', 'nba'."),
     markets: z.string().optional().describe("Comma-separated market keys, e.g. 'h2h,totals'."),
