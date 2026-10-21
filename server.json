@@ -1,13 +1,13 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.Propertyscout001/puntersedge",
-  "description": "Australian and New Zealand racing plus Australian sports odds for AI agents. Read-only tools.",
+  "description": "Live Australian racing and sports odds for AI agents, hosted or local. Read-only tools.",
   "repository": {
     "url": "https://github.com/Propertyscout001/puntersedge-mcp",
     "source": "github"
   },
-  "version": "0.4.3",
-  "websiteUrl": "https://puntersedge.online/developers/mcp-server",
+  "version": "0.5.0",
+  "websiteUrl": "https://puntersedge.online/developers/remote-mcp",
   "packages": [
     {
       "registryType": "pypi",
@@ -29,6 +29,21 @@
           "description": "Override the API base URL. Defaults to https://api.puntersedge.online — you should not normally set this.",
           "isRequired": false,
           "isSecret": false,
+          "format": "string"
+        }
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.puntersedge.online/mcp",
+      "headers": [
+        {
+          "name": "X-API-Key",
+          "description": "PuntersEdge API key (Authorization: Bearer <key> also works). Free tier is 3,000 credits/month with no card required: https://puntersedge.online/api",
+          "isRequired": true,
+          "isSecret": true,
           "format": "string"
         }
       ]
