@@ -6,8 +6,8 @@
     "url": "https://github.com/Propertyscout001/puntersedge-mcp",
     "source": "github"
   },
-  "version": "0.5.0",
-  "websiteUrl": "https://puntersedge.online/developers/remote-mcp",
+  "version": "0.5.1",
+  "websiteUrl": "https://puntersedge.online/developers/remote-mcp?utm_source=mcp-registry&utm_medium=directory&utm_campaign=hosted-mcp",
   "packages": [
     {
       "registryType": "pypi",
